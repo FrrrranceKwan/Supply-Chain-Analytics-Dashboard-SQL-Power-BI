@@ -1,132 +1,130 @@
-Markdown
+# 📦 Supply Chain Analytics Dashboard
 
-# Supply Chain Analytics Dashboard (SQL + Power BI)
+![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![SQL](https://img.shields.io/badge/sql-003B57?style=for-the-badge&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-## 📌 Project Overview
-This project simulates a real-world **Luxury Retail Supply Chain Dashboard**, inspired by the business context of a South Asia Supply Chain team. 
-
-The dashboard is designed to support high-level decision-making in:
-* **Omnichannel order performance monitoring**
-* **Sell-through analysis & product performance review**
-* **Inventory aging and stock optimization**
-* **Store-level inventory comparison for rebalancing actions**
-
-The report provides a comprehensive view of supply chain health, moving from order fulfillment efficiency to deep-dives into inventory risks.
-
-> **Note:** All datasets used in this project are synthetically generated for learning and demonstration purposes.
+> **A Strategic Dashboard for Omnichannel, Sell-through, and Inventory Health Analysis.**
 
 ---
 
-## 🗂 Project Files
+## 📖 Table of Contents
+- [📌 Project Background](#-project-background)
+- [📊 Dashboard Showcase](#-dashboard-showcase)
+- [💡 Key Business Insights](#-key-business-insights)
+- [⚙️ Data Architecture](#-data-architecture)
+- [📂 Project Structure](#-project-structure)
+- [🚀 How to Use](#-how-to-use)
 
-```text
-📁 LV-Supply-Chain-Dashboard/
-│
-├── 📂 data/
-│   ├── dim_products.csv           # SKU-level attributes
-│   ├── dim_stores.csv             # Store and country information
-│   ├── fact_orders.csv            # Order transactions (channels, dates, fulfillment)
-│   ├── fact_inventory_monthly.csv # Monthly inventory snapshots and aging
-│
-├── 📂 pbix/
-│   └── Supply Chain Analysis_GUAN.pbix  # Power BI Source File
-│
-├── 📂 pdf/
-│   └── Supply Chain Analysis_GUAN.pdf   # Static Report Export
-│
-└── README.md
-📊 Dashboard Pages
-1️⃣ Page 1: Orders & Omnichannel Performance
-Focus: Client order management, fulfillment efficiency, and monthly operational stability.
+---
 
-🔹 Key Performance Indicators (KPIs)
-Total Orders
+## 📌 Project Background
 
-Fulfillment Rate %
+This project simulates a real-world **Luxury Retail Supply Chain Dashboard**, designed to address specific operational challenges faced by the South Asia Supply Chain team.
 
-Cancellation Rate %
+The primary objective is to move beyond simple reporting to **actionable analytics**, focusing on:
+1.  **Fulfillment Efficiency:** Monitoring Lead Time and Fill Rate.
+2.  **Channel Performance:** Comparing Boutique vs. E-commerce vs. Omni metrics.
+3.  **Inventory Health:** Identifying aged stock risks and rebalancing opportunities.
 
-Average Lead Time (Days)
+*Note: All datasets are synthetically generated for demonstration purposes.*
 
-🔹 Visuals
-Orders by Channel (Boutique vs. E-commerce vs. Omni)
+---
 
-Order Status Breakdown
+## 📊 Dashboard Showcase
 
-Average Lead Time Monthly Trend
+### 1️⃣ Page 1: Orders & Omnichannel Performance
+*Focus: Operational stability, Order fulfillment, and Channel split.*
 
-Optional: Orders by Country
+![Insert Screenshot of Page 1 Here](https://via.placeholder.com/800x450?text=Please+Upload+Your+Dashboard+Screenshot+Here)
+*(Replace the link above with your actual screenshot)*
 
-💡 Business Insight 1 — Fulfillment Performance Orders show stable fulfillment levels across the year. However, occasional increases in lead time suggest seasonal demand fluctuations. Recommendation: Monitoring peak months closely can improve response times and customer satisfaction.
+**Key Metrics Tracked:**
+* `Total Orders` | `Fulfillment Rate %` | `Cancellation Rate %` | `Avg Lead Time (Days)`
 
-💡 Business Insight 2 — Channel Contribution Boutique remains the dominant channel, while E-commerce and Omni channels show steady activity. Recommendation: Understanding channel behavior helps optimize staffing and stock allocation specific to channel needs.
+---
 
-2️⃣ Page 2: Sell-through & Inventory Health
-Focus: Evaluating product performance, inventory freshness, and rebalancing opportunities.
+### 2️⃣ Page 2: Sell-through & Inventory Health
+*Focus: Product lifecycle, Stock aging risks, and Store-level distribution.*
 
-🔹 Key Performance Indicators (KPIs)
-Units Sold (YTD)
+(https://via.placeholder.com/800x450?text=Please+Upload+Your+Dashboard+Screenshot+Here)
+*(Replace the link above with your actual screenshot)*
 
-Top Seller Contribution %
+**Key Metrics Tracked:**
+* `Units Sold (YTD)` | `Top Seller Contribution %` | `Aged Stock % (>60 Days)`
 
-Total Inventory Units
+---
 
-Aged Stock % (>60 days)
+## 💡 Key Business Insights
 
-🔹 Visuals
-Top 10 Best Selling SKUs
+The analysis revealed several critical findings that drive business decisions:
 
-Bottom 10 Slowest Moving SKUs
+> **📉 The "Pareto" Risk**
+> Sell-through is highly concentrated. A small percentage of SKUs drive the majority of revenue.
+> * **Action:** Review the "Long Tail" products for markdown or de-listing to free up working capital.
 
-Sales Distribution by Category
+> **⏳ Inventory Aging Alert**
+> There is a significant accumulation of stock aged **>60 days** in specific boutique locations, increasing holding costs.
+> * **Action:** Initiate immediate store-to-store transfers (rebalancing) to move aged stock to high-traffic locations.
 
-Inventory Aging Distribution (<30 days to >90 days)
+> **🚚 Lead Time Seasonality**
+> Average lead time spikes during peak promotional months.
+> * **Action:** Adjust staffing rosters and logistics capacity planning 2 months prior to forecasted peaks.
 
-Store Inventory Comparison
+---
 
-💡 Business Insight 1 — Sales Concentration Sell-through is highly concentrated in a small number of SKUs (Pareto Principle), while many products contribute minimally. Risk: High product dependency. Recommendation: Targeted rebalancing or markdown strategies for slow movers.
+## ⚙️ Data Architecture
 
-💡 Business Insight 2 — Inventory Aging Risk Aged inventory (>60 days) is accumulating in specific stores. Risk: Increased holding costs and reduced sell-through efficiency. Recommendation: Immediate store-level rebalancing and SKU-level review are required to clear aged stock.
+The project utilizes a **Star Schema** to ensure optimal performance in Power BI.
 
-🧪 Data Model
-The data model follows a clean Star Schema to ensure optimal performance and accurate filtering.
+### Entity Relationship Diagram (ERD)
+*(GitHub will render this diagram automatically)*
 
-Tables
-Dimensions: dim_products, dim_stores
+```mermaid
+erDiagram
+    DIM_PRODUCTS ||--o{ FACT_ORDERS : "contains"
+    DIM_STORES   ||--o{ FACT_ORDERS : "fulfills"
+    DIM_PRODUCTS ||--o{ FACT_INVENTORY : "stocks"
+    DIM_STORES   ||--o{ FACT_INVENTORY : "stores"
 
-Facts: fact_orders, fact_inventory_monthly
-
-Entity Relationship Diagram (ERD) logic
+    DIM_PRODUCTS {
+        string SKU
+        string Category
+        string Collection
+    }
+    DIM_STORES {
+        string StoreID
+        string Country
+        string Channel
+    }
+    FACT_ORDERS {
+        date OrderDate
+        int Quantity
+        string Status
+        int LeadTime
+    }
+    FACT_INVENTORY {
+        date SnapshotDate
+        int Quantity
+        string AgingBucket
+    }
+📂 Project Structure
 Plaintext
 
-(Dimension)          (Fact)
-dim_products (1) ──── (*) fact_orders
-dim_stores   (1) ──── (*) fact_orders
-
-dim_products (1) ──── (*) fact_inventory_monthly
-dim_stores   (1) ──── (*) fact_inventory_monthly
-🔧 Technologies Used
-SQL: For data calculation, validation, and cleaning.
-
-Power BI Desktop: For dashboard design and visualization.
-
-DAX (Data Analysis Expressions): For complex measures (Ranking, Contribution %, Aging Logic).
-
-Power Query: For ETL (Extract, Transform, Load) processes.
-
-Python: Used for synthetic data generation.
-
-Data Modeling: Implemented Star Schema best practices.
-
-🚀 Key Learning Outcomes
-Through this project, I demonstrated the ability to:
-
-Design End-to-End Solutions: Built a BI dashboard aligned with real-world Job Descriptions (JD) for Supply Chain roles.
-
-Data Modeling: Modeled relational data effectively for analytics.
-
-Advanced DAX: Created dynamic KPIs including ranking logic, contribution percentages, and inventory aging buckets.
-
-Visual Analytics: Performed specific supply chain analyses: Sell-through rate, Fulfillment efficiency, and Inventory aging.
-
-Storytelling: Communicated actionable business insights derived from data.
+📁 Supply-Chain-Dashboard/
+│
+├── 📂 data/                   # Raw CSV files
+│   ├── dim_products.csv
+│   ├── dim_stores.csv
+│   ├── fact_orders.csv
+│   └── fact_inventory_monthly.csv
+│
+├── 📂 pbix/                   # Power BI Source File
+│   └── Supply Chain Analysis_GUAN.pbix
+│
+├── 📂 assets/                 # Screenshots & Icons for README
+│   ├── dashboard_p1.png
+│   └── dashboard_p2.png
+│
+└── README.md
