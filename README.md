@@ -37,8 +37,6 @@ The primary objective is to move beyond simple reporting to **actionable analyti
 ### 1️⃣ Page 1: Orders & Omnichannel Performance
 *Focus: Operational stability, Order fulfillment, and Channel split.*
 
-![Insert Screenshot of Page 1 Here](https://via.placeholder.com/800x450?text=Please+Upload+Your+Dashboard+Screenshot+Here)
-*(Replace the link above with your actual screenshot)*
 
 **Key Metrics Tracked:**
 * `Total Orders` | `Fulfillment Rate %` | `Cancellation Rate %` | `Avg Lead Time (Days)`
@@ -79,10 +77,8 @@ The analysis revealed several critical findings that drive business decisions:
 The project utilizes a **Star Schema** to ensure optimal performance in Power BI.
 
 ### Entity Relationship Diagram (ERD)
-*(GitHub will render this diagram automatically)*
 
-```mermaid
-erDiagram
+```mermaiderDiagram
     DIM_PRODUCTS ||--o{ FACT_ORDERS : "contains"
     DIM_STORES   ||--o{ FACT_ORDERS : "fulfills"
     DIM_PRODUCTS ||--o{ FACT_INVENTORY : "stocks"
