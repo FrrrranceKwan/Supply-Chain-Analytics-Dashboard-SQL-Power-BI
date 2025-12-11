@@ -1,0 +1,11 @@
+store_id,store_name,country,city,store_type
+SG01,Singapore Store 1,Singapore,City1,Flagship
+SG02,Singapore Store 2,Singapore,City2,Airport
+MY01,Malaysia Store 1,Malaysia,City1,Mall
+MY02,Malaysia Store 2,Malaysia,City2,Mall
+TH01,Thailand Store 1,Thailand,City1,Mall
+TH02,Thailand Store 2,Thailand,City2,Airport
+ID01,Indonesia Store 1,Indonesia,City1,Mall
+ID02,Indonesia Store 2,Indonesia,City2,Airport
+VN01,Vietnam Store 1,Vietnam,City1,Mall
+VN02,Vietnam Store 2,Vietnam,City2,Mall
