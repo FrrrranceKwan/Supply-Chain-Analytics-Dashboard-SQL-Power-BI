@@ -46,9 +46,6 @@ The primary objective is to move beyond simple reporting to **actionable analyti
 ### 2️⃣ Page 2: Sell-through & Inventory Health
 *Focus: Product lifecycle, Stock aging risks, and Store-level distribution.*
 
-(https://via.placeholder.com/800x450?text=Please+Upload+Your+Dashboard+Screenshot+Here)
-*(Replace the link above with your actual screenshot)*
-
 **Key Metrics Tracked:**
 * `Units Sold (YTD)` | `Top Seller Contribution %` | `Aged Stock % (>60 Days)`
 
